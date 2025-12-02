@@ -27,42 +27,48 @@ class Agent:
         return [
             {
                 "type": "function",
-                "name": "get_public_ip",
-                "description": "Get the public IP address of the user.",
-                "parameters": {
-                    "type": "object",
-                    "properties": {},
-                    "required": []
+                "function": {
+                    "name": "get_public_ip",
+                    "description": "Get the public IP address of the user.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {},
+                        "required": []
+                    }
                 }
             },
             {
                 "type": "function",
-                "name": "get_location",
-                "description": "Get city location based on public user IP address.",
-                "parameters": {
-                    "type": "object",
-                    "properties": {
-                        "ip_address": {
-                            "type": "string",
-                            "description": "The public IP address of the user."
-                        }
-                    },
-                    "required": ["ip_address"]
+                "function": {
+                    "name": "get_location",
+                    "description": "Get city location based on public user IP address.",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "ip_address": {
+                                "type": "string",
+                                "description": "The public IP address of the user."
+                            }
+                        },
+                        "required": ["ip_address"]
+                    }
                 }
             },
             {
                 "type": "function",
-                "name": "get_location_info",
-                "description": "Get facts about city",
-                "parameters": {
-                    "type": "object",
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "description": "The name of the city."
-                        }
-                    },
-                    "required": ["name"]
+                "function": {
+                    "name": "get_location_info",
+                    "description": "Get facts about city",
+                    "parameters": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string",
+                                "description": "The name of the city."
+                            }
+                        },
+                        "required": ["name"]
+                    }
                 }
             }
         ]
