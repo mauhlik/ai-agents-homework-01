@@ -276,7 +276,7 @@ def main():
     )
 
     logging.info("Instantiating Agent.")
-    agent = Agent(client=client, model="ollama/llama3.2")
+    agent = Agent(client=client, model="ollama/mistral")
     
     messages = [
         {
